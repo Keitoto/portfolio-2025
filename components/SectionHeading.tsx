@@ -4,7 +4,7 @@ type Props = {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
   subText?: string
   children: React.ReactNode
-} & ComponentPropsWithoutRef<'h1'> // Extends HTML attributes
+} & ComponentPropsWithoutRef<'h1'>
 
 export const SectionHeading: FC<Props> = ({
   as: Tag = 'h1',
