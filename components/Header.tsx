@@ -32,7 +32,7 @@ export const Header: FC<Props> = () => {
       <Link href="/" className="text-3xl mr-auto">Keita.</Link>
 
       <nav className="hidden md:flex justify-center">
-        <ul className="flex items-center gap-6 lg:gap-8 leading-none border px-12 h-12 rounded-full shadow-xs bg-white">
+        <ul className="flex items-center gap-6 lg:gap-8 leading-none border px-12 h-12 rounded-full shadow-xs bg-background">
           {navMenu.map((item) => {
             return (
               <li key={item.name} className="hover:text-muted-foreground">
