@@ -10,9 +10,6 @@
     "lint:fix": "next lint --fix",
     "prepare": "husky"
   },
-  "lint-staged": {
-    "*.{ts,tsx,mdx}": "eslint --cache --fix"
-  },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.0",
     "class-variance-authority": "^0.7.1",
@@ -37,5 +34,8 @@
     "lint-staged": "^15.5.0",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,mdx}": "eslint --cache --fix"
   }
 }
