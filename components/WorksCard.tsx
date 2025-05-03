@@ -1,7 +1,8 @@
 import type { IWorkCard } from '@/types'
 import type { FC } from 'react'
+import { GithubIcon } from '@/components/icons/GithubIcon'
 import { buttonVariants } from '@/components/ui/button'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ExternalLink } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -33,10 +34,16 @@ export const WorksCard: FC<Props> = ({ order, workData }) => {
           </div>
         )}
         <div className="flex gap-2 mb-4">
-          <Link href={workData.demoLink} target="_blank" className={buttonVariants({ variant: 'default' })}>Live Demo</Link>
-          <Link href={workData.githubLink} target="_blank" className={buttonVariants({ variant: 'outline' })}>View Code</Link>
+          <Link href={workData.demoLink} target="_blank" className={buttonVariants({ variant: 'default' })}>
+            Live Demo
+            <ExternalLink size={16} />
+          </Link>
+          <Link href={workData.githubLink} target="_blank" className={buttonVariants({ variant: 'outline' })}>
+            View Code
+            <GithubIcon size={16} />
+          </Link>
         </div>
-        <Link href={workData.articleLink} className="group text-base md:text-lg flex items-center gap-2 underline underline-offset-2 decoration-1 hover:text-muted-foreground transition-colors duration-200">
+        <Link href={workData.articleLink} className="group inline-flex text-base md:text-lg items-center gap-2 underline underline-offset-2 decoration-1 hover:text-muted-foreground transition-colors duration-200">
           Read the story
           <ArrowRight size={12} />
         </Link>

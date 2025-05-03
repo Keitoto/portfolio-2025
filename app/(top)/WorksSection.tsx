@@ -42,7 +42,7 @@ export function WorksSection() {
         <SectionHeading subText="My portfolio" as="h2">
           Latest works
         </SectionHeading>
-        <div className="flex flex-col gap-16">
+        <div className="flex flex-col gap-24">
           {dummyWorkCards.map((card, i) => (
             <WorksCard key={card.id} workData={card} order={i} />
           ))}
