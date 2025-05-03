@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Header } from '@/components/Header'
+import { Providers } from '@/components/Providers'
 import { Ovo } from 'next/font/google'
 import './globals.css'
 
@@ -30,14 +31,16 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth scroll-pt-20">
+    <html lang="en" className="scroll-smooth scroll-pt-20" suppressHydrationWarning>
       <body
         className={`${ovo.className} antialiased`}
       >
-        <Header />
-        <main className="pt-20">
-          {children}
-        </main>
+        <Providers>
+          <Header />
+          <main className="pt-20">
+            {children}
+          </main>
+        </Providers>
       </body>
     </html>
   )

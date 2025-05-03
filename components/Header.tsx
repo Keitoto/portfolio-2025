@@ -26,7 +26,7 @@ const navMenu = [
 
 export const Header: FC<Props> = () => {
   return (
-    <header className="fixed inset-x-0 top-0 md:grid md:grid-cols-[1fr_auto_1fr] items-center px-4 lg:px-8 xl:px-[8%] h-20 z-50 bg-white/90">
+    <header className="fixed inset-x-0 top-0 flex md:grid md:grid-cols-[1fr_auto_1fr] items-center px-4 lg:px-8 xl:px-[8%] h-20 z-50 bg-background/90">
       <Link href="/" className="text-3xl mr-auto">Keita.</Link>
 
       <nav className="hidden md:flex justify-center">
@@ -41,7 +41,7 @@ export const Header: FC<Props> = () => {
         </ul>
       </nav>
 
-      <div className="ml-auto flex items-center gap-2">
+      <div className="hidden md:flex ml-auto items-center gap-2">
         <ThemeToggle />
         <Link href="/#contact" className={`${buttonVariants({ variant: 'outline' })} !rounded-full h-12 px-8 !text-lg`}>Let's talk</Link>
       </div>
