@@ -14,10 +14,10 @@ export const SectionHeading: FC<Props> = ({
 }) => {
   return (
     <div className="flex flex-col-reverse items-center gap-4 mb-8">
-      <Tag className="text-5xl leading-none" {...props}>
+      <Tag className="text-4xl md:text-5xl leading-none" {...props}>
         {children}
       </Tag>
-      {subText && <p className="text-lg leading-none">{subText}</p>}
+      {subText && <p className="text-base md:text-lg leading-none">{subText}</p>}
     </div>
   )
 }
