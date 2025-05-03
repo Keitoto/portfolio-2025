@@ -1,4 +1,8 @@
+'use client'
+
+import { ResponsiveTable } from '@/components/ResponsiveTable'
 import { SectionHeading } from '@/components/SectionHeading'
+import { SkillsTable } from '@/data/skills'
 
 export function SkillsSection() {
   return (
@@ -6,7 +10,9 @@ export function SkillsSection() {
       <SectionHeading subText="What I can do" as="h2">
         Skills and Tools
       </SectionHeading>
-      <div>My portfolio</div>
+      <div>
+        <ResponsiveTable data={SkillsTable} />
+      </div>
     </section>
   )
 };
