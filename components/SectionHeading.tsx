@@ -4,16 +4,18 @@ type Props = {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
   subText?: string
   children: React.ReactNode
+  className?: string
 } & ComponentPropsWithoutRef<'h1'>
 
 export const SectionHeading: FC<Props> = ({
   as: Tag = 'h1',
   subText,
   children,
+  className,
   ...props
 }) => {
   return (
-    <div className="flex flex-col-reverse items-center gap-4 mb-16">
+    <div className={`flex flex-col-reverse items-center gap-4 ${className}`}>
       <Tag className="text-4xl md:text-5xl leading-none" {...props}>
         {children}
       </Tag>

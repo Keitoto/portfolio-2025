@@ -38,7 +38,7 @@ const dummyWorkCards: IWorkCard[] = [
 export function WorksSection() {
   return (
     <div className="container max-w-2xl">
-      <SectionHeading subText="My portfolio" as="h2">
+      <SectionHeading subText="My portfolio" as="h2" className="mb-16">
         Latest works
       </SectionHeading>
       <div className="flex flex-col gap-24">

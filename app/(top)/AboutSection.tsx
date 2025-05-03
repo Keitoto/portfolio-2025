@@ -7,7 +7,7 @@ import Image from 'next/image'
 export function AboutSection() {
   return (
     <div className="container max-w-2xl">
-      <SectionHeading subText="Introduction" as="h2">
+      <SectionHeading subText="Introduction" as="h2" className="mb-16">
         About me
       </SectionHeading>
       <div className="grid grid-rows-2 grid-cols-3 [&>*]:bg-accent gap-4 [&>*]:rounded-3xl [&>*]:p-8">

@@ -5,7 +5,7 @@ import { SkillsTable } from '@/data/skills'
 export function SkillsSection() {
   return (
     <div className="container max-w-5xl">
-      <SectionHeading subText="What I can do" as="h2">
+      <SectionHeading subText="What I can do" as="h2" className="mb-16">
         Skills and Tools
       </SectionHeading>
       {/* <div>
