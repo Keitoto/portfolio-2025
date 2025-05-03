@@ -6,13 +6,13 @@ import { SkillsTable } from '@/data/skills'
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-12 px-6">
+    <div className="container max-w-5xl">
       <SectionHeading subText="What I can do" as="h2">
         Skills and Tools
       </SectionHeading>
       <div>
         <ResponsiveTable data={SkillsTable} />
       </div>
-    </section>
+    </div>
   )
 };

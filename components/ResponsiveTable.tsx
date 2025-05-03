@@ -13,26 +13,26 @@ export const ResponsiveTable: FC<Props> = ({ data }) => {
     <>
       {/* Desktop View (3 columns) - shows on md+ screens */}
       <div className="overflow-x-auto">
-        <table className="w-full">
+        <table className="w-full [&_th]:p-3 [&_td]:p-3 [&_td]:align-top">
           <thead>
             <tr>
-              <th className="text-left p-3 w-[120px] border-r"></th>
-              <th className="text-left p-3 border-r w-[50%]">Primary Options</th>
-              <th className="text-left p-3 w-[50%]">Basic Familiarity</th>
+              <th className="w-[120px] lg:w-[160px] border-r"></th>
+              <th className="border-r w-[50%]">Primary Options</th>
+              <th className="w-[50%]">Basic Familiarity</th>
             </tr>
           </thead>
           <tbody>
             {data.map(row => (
               <tr key={row.title}>
-                <td className="font-bold p-3 border-t border-r align-top">{row.title}</td>
-                <td className="p-3 border-t border-r align-top">
+                <th className="border-t border-r">{row.title}</th>
+                <td className="border-t border-r">
                   {row.primary && row.primary?.map(item => (
-                    <p>{item}</p>
+                    <p key={item}>{item}</p>
                   ))}
                 </td>
-                <td className="p-3 border-t align-top">
+                <td className="border-t">
                   {row.secondary && row.secondary?.map(item => (
-                    <p>{item}</p>
+                    <p key={item}>{item}</p>
                   ))}
                 </td>
               </tr>

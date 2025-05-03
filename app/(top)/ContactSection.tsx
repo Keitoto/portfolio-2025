@@ -2,11 +2,11 @@ import { SectionHeading } from '@/components/SectionHeading'
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-12 px-6">
+    <div className="container max-w-2xl">
       <SectionHeading subText="Connect with me" as="h2">
         Get in touch
       </SectionHeading>
       <div>Contact</div>
-    </section>
+    </div>
   )
 }

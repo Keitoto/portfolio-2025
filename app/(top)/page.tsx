@@ -7,11 +7,25 @@ import { WorksSection } from '@/app/(top)/WorksSection'
 export default function Home() {
   return (
     <>
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <WorksSection />
-      <ContactSection />
+      <section className="py-16 px-6">
+        <HeroSection />
+      </section>
+
+      <section id="about" className="py-16 px-6">
+        <AboutSection />
+      </section>
+
+      <section id="skills" className="py-16 px-6">
+        <SkillsSection />
+      </section>
+
+      <section id="works" className="py-16 px-6">
+        <WorksSection />
+      </section>
+
+      <section id="contact" className="py-16 px-6">
+        <ContactSection />
+      </section>
     </>
   )
 }

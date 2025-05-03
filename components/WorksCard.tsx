@@ -29,7 +29,7 @@ export const WorksCard: FC<Props> = ({ order, workData }) => {
         {workData.tags && workData.tags.length > 0 && (
           <div className="flex gap-2 mb-4 flex-wrap text-xs md:text-sm">
             {workData.tags.map(tag => (
-              <span className="border leading-none px-1.5 py-1 rounded-sm">{tag}</span>
+              <span key={tag} className="border leading-none px-1.5 py-1 rounded-sm">{tag}</span>
             ))}
           </div>
         )}

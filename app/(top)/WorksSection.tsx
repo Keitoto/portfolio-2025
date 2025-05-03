@@ -37,17 +37,15 @@ const dummyWorkCards: IWorkCard[] = [
 
 export function WorksSection() {
   return (
-    <section id="works" className="py-12 px-6">
-      <section className="py-12 px-6">
-        <SectionHeading subText="My portfolio" as="h2">
-          Latest works
-        </SectionHeading>
-        <div className="flex flex-col gap-24">
-          {dummyWorkCards.map((card, i) => (
-            <WorksCard key={card.id} workData={card} order={i} />
-          ))}
-        </div>
-      </section>
-    </section>
+    <div className="container max-w-2xl">
+      <SectionHeading subText="My portfolio" as="h2">
+        Latest works
+      </SectionHeading>
+      <div className="flex flex-col gap-24">
+        {dummyWorkCards.map((card, i) => (
+          <WorksCard key={card.id} workData={card} order={i} />
+        ))}
+      </div>
+    </div>
   )
 };
