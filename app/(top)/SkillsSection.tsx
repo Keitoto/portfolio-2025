@@ -1,7 +1,5 @@
-'use client'
-
-import { ResponsiveTable } from '@/components/ResponsiveTable'
 import { SectionHeading } from '@/components/SectionHeading'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { SkillsTable } from '@/data/skills'
 
 export function SkillsSection() {
@@ -10,9 +8,35 @@ export function SkillsSection() {
       <SectionHeading subText="What I can do" as="h2">
         Skills and Tools
       </SectionHeading>
-      <div>
+      {/* <div>
         <ResponsiveTable data={SkillsTable} />
-      </div>
+      </div> */}
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableCell className="w-[120px]"></TableCell>
+            <TableHead className="font-bold">Primary Options</TableHead>
+            <TableHead className="font-bold">Basic Familiarity</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {SkillsTable.map(row => (
+            <TableRow key={row.title}>
+              <TableHead className="border-t border-r font-bold">{row.title}</TableHead>
+              <TableCell className="border-t border-r">
+                {row.primary && row.primary?.map(item => (
+                  <p key={item}>{item}</p>
+                ))}
+              </TableCell>
+              <TableCell className="border-t">
+                {row.secondary && row.secondary?.map(item => (
+                  <p key={item}>{item}</p>
+                ))}
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
     </div>
   )
 };
