@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Footer from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Providers } from '@/components/Providers'
 import { Ovo } from 'next/font/google'
@@ -40,6 +41,7 @@ export default function RootLayout({
           <main className="pt-20">
             {children}
           </main>
+          <Footer />
         </Providers>
       </body>
     </html>

@@ -23,7 +23,7 @@ export default function Home() {
         <WorksSection />
       </section>
 
-      <section id="contact" className="py-16 px-6">
+      <section id="contact" className="py-16 px-6 pb-32">
         <ContactSection />
       </section>
     </>
