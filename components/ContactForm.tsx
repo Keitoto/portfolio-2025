@@ -2,7 +2,7 @@
 import type { FC } from 'react'
 import type { SubmitHandler } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -55,9 +55,8 @@ export const ContactForm: FC<Props> = () => {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Your Name" {...field} />
+                <Input placeholder="Name" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -68,9 +67,8 @@ export const ContactForm: FC<Props> = () => {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="Your Email" {...field} />
+                <Input placeholder="Email" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -81,9 +79,8 @@ export const ContactForm: FC<Props> = () => {
           name="content"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Content</FormLabel>
               <FormControl>
-                <Textarea placeholder="Your Message" {...field} />
+                <Textarea placeholder="Message" {...field} className="min-h-32" />
               </FormControl>
               <FormMessage />
             </FormItem>
