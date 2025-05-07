@@ -13,7 +13,7 @@ interface Props {
 
 export const WorksCard: FC<Props> = ({ order, workData }) => {
   return (
-    <div className={`flex ${order % 2 === 0 ? 'flex-row-reverse' : 'flex-row'} items-center gap-[4%]`}>
+    <div className={`flex ${order % 2 === 0 ? 'flex-row-reverse' : 'flex-row'} items-center gap-[4%] font-sans`}>
       <div className="relative w-[48%] aspect-[4/3] rounded-lg overflow-hidden shadow-md border border-muted bg-accent">
         <div className="h-4 border-b border-accent flex items-center px-2 space-x-1">
           <div className="size-1.5 rounded-full bg-red-400"></div>
@@ -25,7 +25,10 @@ export const WorksCard: FC<Props> = ({ order, workData }) => {
 
       <div className="w-[48%]">
         <h3 className="text-xl md:text-2xl mb-4">{workData.title}</h3>
+
         <p className="text-base md:text-lg mb-4">{workData.description}</p>
+
+        {/* tags */}
         {workData.tags && workData.tags.length > 0 && (
           <div className="flex gap-2 mb-4 flex-wrap text-xs md:text-sm">
             {workData.tags.map(tag => (
@@ -33,6 +36,8 @@ export const WorksCard: FC<Props> = ({ order, workData }) => {
             ))}
           </div>
         )}
+
+        {/* link buttons */}
         <div className="flex gap-2 mb-4">
           <Link href={workData.demoLink} target="_blank" className={buttonVariants({ variant: 'default' })}>
             Live Demo

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Providers } from '@/components/Providers'
-import { Ovo } from 'next/font/google'
+import { Outfit, Ovo } from 'next/font/google'
 import './globals.css'
 
 const ovo = Ovo({
@@ -11,10 +11,11 @@ const ovo = Ovo({
   weight: '400',
 })
 
-// const geistSans = Geist({
-//   variable: '--font-geist-sans',
-//   subsets: ['latin'],
-// })
+const outfit = Outfit({
+  variable: '--font-outfit',
+  subsets: ['latin'],
+  weight: ['400', '600'],
+})
 
 // const geistMono = Geist_Mono({
 //   variable: '--font-geist-mono',
@@ -34,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth scroll-pt-20" suppressHydrationWarning>
       <body
-        className={`${ovo.className} antialiased`}
+        className={`${ovo.variable} ${outfit.variable} antialiased`}
       >
         <Providers>
           <Header />

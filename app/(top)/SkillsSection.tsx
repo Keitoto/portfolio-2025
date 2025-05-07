@@ -11,7 +11,7 @@ export function SkillsSection() {
       {/* <div>
         <ResponsiveTable data={SkillsTable} />
       </div> */}
-      <Table>
+      <Table className="font-sans">
         <TableHeader>
           <TableRow>
             <TableCell className="w-[120px]"></TableCell>

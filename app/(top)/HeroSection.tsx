@@ -12,11 +12,11 @@ export function HeroSection() {
         I build responsive web applications with clean code and seamless functionality.
       </p>
       <div className="flex gap-4">
-        <Link href="#works" className={`${buttonVariants()} !rounded-full !px-8 py-4 h-auto leading-none`}>
+        <Link href="#works" className={`${buttonVariants()} !rounded-full !px-8 py-4 h-auto leading-none font-sans`}>
           View works
           <ArrowRight className="size-4" />
         </Link>
-        <Link href="#contact" className={`${buttonVariants({ variant: 'outline' })} !rounded-full !px-8 py-4 h-auto leading-none`}>Get in touch</Link>
+        <Link href="#contact" className={`${buttonVariants({ variant: 'outline' })} !rounded-full !px-8 py-4 h-auto leading-none font-sans`}>Get in touch</Link>
       </div>
     </div>
   )

@@ -49,7 +49,7 @@ export const ContactForm: FC<Props> = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(processForm)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(processForm)} className="space-y-8 font-sans">
         <FormField
           control={form.control}
           name="name"
