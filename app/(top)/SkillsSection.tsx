@@ -1,6 +1,6 @@
 import { SectionHeading } from '@/components/SectionHeading'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
-import { SkillsTable } from '@/data/skills'
+import { SkillsTable } from '@/content/skills'
 
 export function SkillsSection() {
   return (
