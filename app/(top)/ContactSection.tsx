@@ -27,10 +27,10 @@ export function ContactSection() {
             keitasekihara@gmail.com
           </Link>
           <div className="flex gap-4">
-            <Link href="https://github.com/Keitoto" className={`${buttonVariants({ variant: 'ghost' })} size-8`}>
+            <Link href="https://github.com/Keitoto" className={`${buttonVariants({ variant: 'ghost' })} size-8`} target="_blank">
               <GithubIcon className="size-6" />
             </Link>
-            <Link href="https://github.com/Keitoto" className={`${buttonVariants({ variant: 'ghost' })} size-8`}>
+            <Link href="https://github.com/Keitoto" className={`${buttonVariants({ variant: 'ghost' })} size-8`} target="_blank">
               <LinkedInIcon className="size-6" />
             </Link>
           </div>

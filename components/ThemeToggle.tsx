@@ -21,7 +21,7 @@ export function ThemeToggle() {
     <Button
       variant="ghost"
       size="icon"
-      className="size-8 p-0"
+      className="size-8 p-0 cursor-pointer"
       onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')}
     >
       {resolvedTheme === 'dark' ? <Sun className="size-6" strokeWidth="1.5" /> : <MoonStar className="size-6" strokeWidth="1" />}

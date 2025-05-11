@@ -17,7 +17,7 @@ export function AboutSection() {
           <Image src={portrait} alt="picture of myself" className="size-32" />
         </div>
         <div className="col-span-1 sm:order-3 flex items-center justify-center">
-          <Button variant="outline" className="px-4 py-2 gap-2 font-sans">
+          <Button variant="outline" className="px-4 py-2 gap-2 font-sans cursor-pointer">
             My CV
             <Download className="size-4" />
           </Button>
