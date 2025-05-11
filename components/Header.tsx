@@ -17,12 +17,12 @@ const navMenu = [
     href: '#about',
   },
   {
-    name: 'Works',
-    href: '#works',
-  },
-  {
     name: 'Skills',
     href: '#skills',
+  },
+  {
+    name: 'Works',
+    href: '#works',
   },
 ]
 
