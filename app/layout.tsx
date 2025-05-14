@@ -33,13 +33,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth scroll-pt-20" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth md:scroll-pt-20 scroll-pt-16" suppressHydrationWarning>
       <body
         className={`${ovo.variable} ${outfit.variable} antialiased`}
       >
         <Providers>
           <Header />
-          <main className="pt-20">
+          <main className="md:pt-20 pt-16">
             {children}
           </main>
           <Footer />

@@ -13,8 +13,8 @@ interface Props {
 
 export const WorksCard: FC<Props> = ({ order, workData }) => {
   return (
-    <div className={`flex ${order % 2 === 0 ? 'flex-row-reverse' : 'flex-row'} items-center gap-[4%] font-sans`}>
-      <div className="relative w-[48%] aspect-[4/3] rounded-lg overflow-hidden shadow-md border border-muted bg-accent">
+    <div className={`md:flex space-y-8 ${order % 2 === 0 ? 'flex-row-reverse' : 'flex-row'} items-center gap-[4%] font-sans`}>
+      <div className="relative md:w-[48%] md:aspect-[4/3] aspect-[16/9] rounded-lg overflow-hidden shadow-md border border-muted bg-accent">
         <div className="h-4 border-b border-accent flex items-center px-2 space-x-1">
           <div className="size-1.5 rounded-full bg-red-400"></div>
           <div className="size-1.5 rounded-full bg-yellow-400"></div>
@@ -23,14 +23,14 @@ export const WorksCard: FC<Props> = ({ order, workData }) => {
         <Image src={workData.thumbNail} width={300} height={200} alt={`Screenshot of ${workData.title} project.}`} className="absolute object-cover w-full h-full inset-x-0 top-4 bottom-0" />
       </div>
 
-      <div className="w-[48%]">
-        <h3 className="text-xl md:text-2xl mb-4">{workData.title}</h3>
+      <div className="md:w-[48%] space-y-4">
+        <h3 className="text-2xl">{workData.title}</h3>
 
-        <p className="text-base md:text-lg mb-4">{workData.description}</p>
+        <p className="text-base md:text-lg">{workData.description}</p>
 
         {/* tags */}
         {workData.tags && workData.tags.length > 0 && (
-          <div className="flex gap-2 mb-4 flex-wrap text-xs md:text-sm">
+          <div className="flex gap-2 flex-wrap text-xs md:text-sm">
             {workData.tags.map(tag => (
               <span key={tag} className="border leading-none px-1.5 py-1 rounded-sm">{tag}</span>
             ))}
@@ -38,7 +38,7 @@ export const WorksCard: FC<Props> = ({ order, workData }) => {
         )}
 
         {/* link buttons */}
-        <div className="flex gap-2 mb-4">
+        <div className="flex gap-2">
           {workData.demoLink
             && (
               <Link href={workData.demoLink} target="_blank" className={buttonVariants({ variant: 'default' })}>

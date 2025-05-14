@@ -73,7 +73,7 @@ const SkillsTable: ITechStackTableRow[] = [
 export function SkillsSection() {
   return (
     <div className="container max-w-5xl">
-      <SectionHeading subText="What I can do" as="h2" className="mb-16">
+      <SectionHeading subText="What I can do" as="h2" className="md:mb-16 mb-8">
         Skills and Tools
       </SectionHeading>
       <TechStackTable data={SkillsTable} />

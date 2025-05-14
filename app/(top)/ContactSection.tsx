@@ -10,13 +10,13 @@ import Balancer from 'react-wrap-balancer'
 export function ContactSection() {
   return (
     <div className="container max-w-3xl">
-      <SectionHeading subText="Connect with me" as="h2" className="mb-8">
+      <SectionHeading subText="Connect with me" as="h2" className="md:mb-8 mb-4">
         Get in touch
       </SectionHeading>
-      <p className="text-center max-w-xl mx-auto mb-16">
+      <p className="text-center max-w-xl mx-auto md:mb-16 mb-8">
         <Balancer>I'd love to hear from you! If you have any questions, comments or feedback, please use the form below.</Balancer>
       </p>
-      <div className="grid md:grid-cols-2 gap-16">
+      <div className="grid md:grid-cols-2 md:gap-16 gap-8">
         <div className="flex flex-col gap-8">
           <div className="flex items-center gap-4">
             <MapPin className="size-6" />

@@ -41,10 +41,10 @@ export async function WorksSection() {
 
   return (
     <div className="container max-w-2xl">
-      <SectionHeading subText="My portfolio" as="h2" className="mb-16">
+      <SectionHeading subText="My portfolio" as="h2" className="md:mb-16 mb-8">
         Latest works
       </SectionHeading>
-      <div className="flex flex-col gap-24">
+      <div className="flex flex-col md:gap-24 gap-16">
         {projects.map((project, i) => (
           <WorksCard key={project.slug} workData={project} order={i} />
         ))}

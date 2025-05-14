@@ -16,7 +16,7 @@ export const TechStackTable: FC<Props> = ({ data }) => {
     <Table className="font-sans">
       <TableHeader>
         <TableRow>
-          <TableCell className="w-[120px]"></TableCell>
+          <TableCell className="sm:w-[120px] w-[80px]"></TableCell>
           <TableHead className="font-bold">Primary Options</TableHead>
           <TableHead className="font-bold">Basic Familiarity</TableHead>
         </TableRow>

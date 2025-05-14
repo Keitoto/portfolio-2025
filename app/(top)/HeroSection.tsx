@@ -1,5 +1,5 @@
 import { buttonVariants } from '@/components/ui/button'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Hand } from 'lucide-react'
 import Link from 'next/link'
 
 export function HeroSection() {
@@ -16,7 +16,10 @@ export function HeroSection() {
           View works
           <ArrowRight className="size-4" />
         </Link>
-        <Link href="#contact" className={`${buttonVariants({ variant: 'outline' })} !rounded-full !px-8 py-4 h-auto leading-none font-sans`}>Get in touch</Link>
+        <Link href="#contact" className={`${buttonVariants({ variant: 'outline' })} !rounded-full !px-8 py-4 h-auto leading-none font-sans`}>
+          Get in touch
+          <Hand className="size-4" />
+        </Link>
       </div>
     </div>
   )

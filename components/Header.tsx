@@ -28,7 +28,7 @@ const navMenu = [
 
 export const Header: FC<Props> = () => {
   return (
-    <header className="fixed inset-x-0 top-0 flex md:grid md:grid-cols-[1fr_auto_1fr] items-center px-4 lg:px-8 xl:px-[8%] h-20 z-50 bg-background/90">
+    <header className="fixed inset-x-0 top-0 flex md:grid md:grid-cols-[1fr_auto_1fr] items-center px-4 lg:px-8 xl:px-[8%] md:h-20 h-16 z-50 bg-background/90">
       <Link href="/" className="text-3xl mr-auto font-sans font-semibold">Keita.</Link>
 
       <nav className="hidden md:flex justify-center">
